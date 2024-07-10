@@ -1,0 +1,148 @@
+@import "App.scss";
+// Colors and Fonts
+$bg-color: #469ff6;
+$accent-color1: #fee500;
+$accent-color2: #424a52;
+$logo-character: url("../images/logo_character.png");
+$font-main: "Arial", sans-serif;
+
+.gamelodaingpage {
+  background: $bg-color;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+}
+
+// Animations
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.GameLoadingScreen {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; // 각 아이템을 수직 중앙에 배치합니다.
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 52px);
+
+  @include desktop {
+    img {
+      max-width: 200px;
+    }
+
+    .game-info {
+      margin: 0;
+    }
+  }
+}
+
+.RotatingElement {
+  border-radius: 50%;
+  animation: rotate 5s infinite linear;
+  z-index: 5;
+
+  img {
+    width: 50%;
+  }
+}
+
+.Timer {
+  font-size: 5vw;
+  font-weight: bold;
+  color: $accent-color2;
+}
+
+.LoadingText {
+  font-size: 6vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4vw;
+  color: $accent-color1;
+
+  span {
+    display: inline-block;
+    animation: float 2s infinite;
+  }
+}
+
+@for $i from 1 through 11 {
+  .LoadingText span:nth-child(#{$i}) {
+    animation-delay: 0.1s * $i;
+  }
+}
+
+// Background effects
+.GameLoadingScreen::before,
+.GameLoadingScreen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50vw;
+  z-index: -1;
+}
+
+.GameLoadingScreen::before {
+  background: linear-gradient(to left, $bg-color, transparent);
+}
+
+.GameLoadingScreen::after {
+  left: 0;
+  background: linear-gradient(to right, $bg-color, transparent);
+}
+
+.loading-navbar {
+  height: 52px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  img {
+    width: 24px;
+  }
+}
+
+.game-info {
+  animation: heartbeat 1.5s infinite; // 두근두근대는 효과 적용}
+  margin-top: 24px;
+}

@@ -1,0 +1,47 @@
+@import "App.scss";
+
+$mainblack: #121417;
+
+.Button {
+  border-radius: 8px;
+  max-width: 450px;
+  margin: 0 auto;
+
+  // 글씨
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+
+  // 색상
+  &.yellow {
+    box-shadow: 0px -5px 0px #ffa73f inset;
+    border: $mainblack solid;
+    color: $mainblack;
+    background: linear-gradient(180deg, #fff401 0%, #ffd873 100%);
+
+    &:active {
+      background: darken(#fff401, 10%);
+    }
+  }
+
+  &.blue {
+    color: #ffffff;
+    background: #469ff6;
+    border: none;
+
+    &:active {
+      background: darken(#469ff6, 10%);
+    }
+  }
+
+  &.grey {
+    border: #424242 solid;
+    color: #afb4bb;
+    background: #d9dbe3;
+  }
+
+  @include desktop {
+    max-width: 450px;
+    max-height: 48px;
+  }
+}

@@ -1,0 +1,19 @@
+package live.dgrr.domain.member.dto.response;
+
+import live.dgrr.domain.battle.dto.response.BattleDetailWithOpponentInfoResponseDto;
+import live.dgrr.domain.rating.dto.response.RatingResponseDto;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class MemberInfoResponseDto {
+    private MemberResponseDto member;
+    private List<RatingResponseDto> ratingList;
+    private List<BattleDetailWithOpponentInfoResponseDto> battleDetailList;
+
+}

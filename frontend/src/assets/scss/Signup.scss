@@ -1,0 +1,66 @@
+.signupForm {
+  text-align: left;
+  .label {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 48px);
+    margin: auto;
+    margin-bottom: 12px;
+  }
+}
+
+.signup-title {
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 24px 24px;
+}
+
+#nickname-label *,
+#description-label * {
+  margin-bottom: 12px;
+}
+
+.label-title {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Noto Sans KR";
+}
+
+#profileImg-label {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 32px;
+
+  label {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+#ex-profile {
+  width: 100%;
+  height: 200px;
+  border-radius: 70%;
+  position: relative;
+}
+
+#profileImg {
+  display: none;
+}
+
+#nicknamebtn {
+  float: right;
+  height: 49px;
+  width: 72px;
+  margin-top: 12px;
+}
+
+#photo-upload {
+  width: 100%;
+}

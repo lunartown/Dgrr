@@ -1,0 +1,97 @@
+@import "App.scss";
+
+@keyframes fallAndSpin {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes spinInPlace {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.MainPage {
+  background: $blue;
+  width: 100vw;
+  height: 100%;
+  text-align: center;
+
+  // 데스크탑 화면일 때
+  @include desktop {
+    .MainImages {
+      display: flex;
+      justify-content: center;
+      height: 45%;
+      margin: 0;
+
+      #character {
+        width: 150px;
+        height: 150px;
+        margin: auto 0;
+      }
+
+      #title {
+        width: 300px;
+        margin: auto 12px;
+      }
+    }
+  }
+}
+
+.MainBody {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 52px);
+}
+
+.MainNav {
+  margin: auto;
+  width: calc(100% - 48px);
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 24px;
+  }
+}
+
+.MainImages {
+  margin: 46px 0;
+  height: 50%;
+
+  img:first-child {
+    animation: fallAndSpin 2s ease-out forwards,
+      spinInPlace 2s ease-out 2s forwards;
+  }
+
+  img + img {
+    animation: spinInPlace 2s ease-out 2s forwards;
+
+    margin-top: 24px;
+  }
+}
+
+.MainBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50%;
+}
+
+#character {
+  width: 60%;
+}
+
+#title {
+  width: 60%;
+}

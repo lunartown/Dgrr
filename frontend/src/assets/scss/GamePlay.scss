@@ -1,0 +1,261 @@
+@import "App.scss";
+
+.gameplay-page {
+  width: 100%;
+  height: var(--100vh, 100vh);
+  background: black;
+
+  @include desktop {
+    .videos {
+      display: flex;
+
+      #main-video {
+        height: 100%;
+      }
+    }
+
+    .noticeIsRecognitionInfo {
+      height: 1vw;
+      width: 8vw;
+      position: absolute;
+      left: 5%;
+      top: 2%;
+      border-radius: 20%;
+      background-color: #33f133;
+      z-index: 5;
+    }
+
+    .noticeIsRecognitionInfoMessage {
+      max-width: 200px;
+      p {
+        width: 40vw;
+        color: white;
+        font-size: 14px;
+      }
+    }
+
+    .noticeIsNotRecognitionInfo {
+      height: 1vw;
+      width: 8vw;
+      position: absolute;
+      left: 5%;
+      top: 4%;
+      border-radius: 20%;
+      background-color: #ec244f;
+      z-index: 5;
+
+      margin-top: 5px;
+    }
+
+    .noticeIsNotRecognitionInfoMessage {
+      max-width: 200px;
+      margin-top: 5px;
+      p {
+        width: 40vw;
+        color: white;
+        font-size: 14px;
+      }
+    }
+
+    #isNotFaceRecognition {
+      position: absolute;
+      left: 40%;
+    }
+  }
+}
+
+.videos {
+  height: calc(100% - 84px);
+}
+
+#main-video {
+  // navbar랑 맨 밑 마진 12px 뺀 길이 /2
+  height: 50%;
+  // 양옆 마진 12px씩 빼고 계산
+  width: calc(100% - 24px);
+  margin: 0 12px;
+
+  position: relative;
+
+  img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    z-index: 1;
+    border-radius: 70%;
+
+    &#attack {
+      background: red;
+    }
+
+    &#defend {
+      background: blue;
+    }
+  }
+}
+.noticeIsRecognitionInfo {
+  height: 2vw;
+  width: 8vw;
+  position: absolute;
+  left: 5%;
+  top: 2%;
+  border-radius: 20%;
+  background-color: #33f133;
+  z-index: 5;
+  margin-bottom: 4%;
+
+  p {
+    width: 40vw;
+    color: white;
+    font-size: 20px;
+    margin-left: 50%;
+  }
+}
+
+.noticeIsNotRecognitionInfo {
+  height: 2vw;
+  width: 8vw;
+  position: absolute;
+  left: 5%;
+  top: 4%;
+  border-radius: 20%;
+  background-color: #ec244f;
+  z-index: 5;
+
+  p {
+    width: 40vw;
+    color: white;
+    font-size: 20px;
+    margin-left: 50%;
+  }
+}
+
+.noticeIsRecognitionInfoMessage {
+  height: 2vw;
+  width: 40vw;
+  position: absolute;
+  left: 15%;
+  top: 1%;
+  color: #ffffff;
+  z-index: 5;
+}
+
+.noticeIsNotRecognitionInfoMessage {
+  height: 2vw;
+  width: 40vw;
+  position: absolute;
+  left: 15%;
+  top: 3%;
+  color: #ffffff;
+  z-index: 5;
+}
+
+#isFaceRecognition {
+  height: 2vw;
+  width: 10vw;
+  position: absolute;
+  left: 42.5vw;
+  border-radius: 20%;
+  background-color: #33f133;
+  z-index: 5;
+}
+#isNotFaceRecognition {
+  height: 2vw;
+  width: 10vw;
+  position: absolute;
+  left: 42.5vw;
+  border-radius: 20%;
+  background-color: #ec244f;
+  z-index: 5;
+}
+
+.streamcomponent {
+  position: relative;
+  height: 100%;
+}
+
+.streamcomponent video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // 비율 유지한채 세로 꽉차게 확대
+  object-fit: cover;
+}
+
+.gameplay-navbar {
+  text-align: center;
+  margin: 0 12px;
+  height: 52px;
+}
+
+.timer {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+// 턴 변경 모달창
+.role-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.role-modal-content {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.role-modal-content h2 {
+  margin: 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+// 게임 종료 모달창
+.game-end-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}
+
+.game-end-modal-content {
+  width: 80%;
+  max-width: 450px;
+  padding: 24px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.game-end-modal-content h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: red;
+  text-transform: uppercase;
+}
