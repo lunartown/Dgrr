@@ -1,5 +1,7 @@
 # 😆데구르르😆
 
+![image](https://github.com/TEAM-DGRR/dgrr/assets/88870452/34ccc1e0-c7fa-4867-b338-cc3ed0af7c40)
+
 ## 📅 프로젝트 개요
 
 🥕 **개발 기간** : 2023.07.10 ~ 2023.08.18 (총 6주)
@@ -10,6 +12,7 @@
     <tr>
         <td><img src="https://avatars.githubusercontent.com/u/108070719?v=4" width="180"></td>
         <td><img src="https://avatars.githubusercontent.com/u/122499274?v=4" width="180"></td>
+        <td><img src="https://avatars.githubusercontent.com/lunartown" width="180"></td>
         <td><img src="https://avatars.githubusercontent.com/u/88870452?v=4" width="180"></td>
         <td><img src="https://avatars.githubusercontent.com/u/73294363?v=4" width="180"></td>
         <td><img src="https://avatars.githubusercontent.com/u/76903093?v=4" width="180"></td>
@@ -17,6 +20,7 @@
     <tr align=center>
         <td><a href='https://github.com/youngho9999'>전영호</a></td>
         <td><a href='https://github.com/hyuna333'>김현아</a></td>
+        <td><a href='https://github.com/lunartown'>최명하</a></td>
         <td><a href='https://github.com/andbeyond0331'>박미정</a></td>
         <td><a href='https://github.com/yeeeooonn'>이수연</a></td>
         <td><a href='https://github.com/itsdangerous'>이승규</a></td>
@@ -24,6 +28,7 @@
     <tr align=center>
         <td>백엔드(팀장)</td>
         <td>프론트</td>
+        <td>프론트 / 백엔드</td>
         <td>백엔드</td>
         <td>백엔드</td>
         <td>백엔드</td>
